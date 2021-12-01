@@ -14,6 +14,8 @@
 #include <fstream>
 #include <string>
 
+#include "Lexer.h"
+
 /**
  * @brief SCC class orchestrates the entire compilation proccess
  * by calling each sub-system class (Lexer, Parser, etc...)
@@ -21,6 +23,7 @@
  */
 
 class SCC {
+public:
     SCC(std::string sourceFilePath);
     std::string getSourceCode(std::string path);
     void compile(std::string sourceCode);

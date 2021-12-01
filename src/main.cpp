@@ -1,3 +1,5 @@
+#include "SCC.h"
+
 int main() {
-    return 0;
+    SCC("source.c");
 }

@@ -3,4 +3,7 @@ TARGET = SCC
 OBJS = $(wildcard src/*.cpp)
 
 all:
-	$(CC) $(OBJS) -o ./build/$(TARGET)
+	$(CC) $(OBJS) -o $(TARGET) -std=c++11
+
+clean:
+	rm -rf $(TARGET)

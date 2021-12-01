@@ -20,7 +20,8 @@
 enum TokenType {
     KEYWORD,
     IDENTIFIER,
-    OPERATOR
+    OPERATOR,
+    CONSTANT
 };
 
 /**

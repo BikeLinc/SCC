@@ -12,14 +12,6 @@
 
 #include "Token.h"
 
-/**
- * @brief Construct a new Token:: Token object
- * 
- * @param type 
- * @param value 
- * @param rowPosition 
- * @param colPosition 
- */
 Token::Token(TokenType type, std::string value, int rowPosition, int colPosition) {
     this->m_type = type;
     this->m_value = value;
@@ -27,38 +19,18 @@ Token::Token(TokenType type, std::string value, int rowPosition, int colPosition
     this->m_colPosition = colPosition;
 }
 
-/**
- * @brief Return Token's TokenType
- * 
- * @return TokenType 
- */
 TokenType Token::getType() {
     return m_type;
 }
 
-/**
- * @brief Return Token's value
- * 
- * @return std::string 
- */
 std::string Token::getValue() {
     return m_value;
 }
 
-/**
- * @brief Return Token's row position in the source file
- * 
- * @return int 
- */
 int Token::getRowPosition() {
     return m_rowPosition;
 }
 
-/**
- * @brief Return Token's col position in the source file
- * 
- * @return int 
- */
 int Token::getColPosition() {
     return m_colPosition;
 }

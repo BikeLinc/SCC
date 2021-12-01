@@ -15,26 +15,33 @@
 SCC::SCC(std::string sourceFilePath) {
     std::string sourceCode;
     sourceCode = getSourceCode(sourceFilePath);
+
     compile(sourceCode);
 }
 
 std::string SCC::getSourceCode(std::string path) {
     std::ifstream file(path);
-    std::string str;
+    std::string line;
+    std::string sourceCode = "";
 
+    // Does file exits?
     if(!file.is_open()) {
-        std::cout << "File does not exitst: " << path << std::endl;
+        std::cout << "Directory or File does not exitst: " << path << std::endl;
     }
 
-    // Loops Every Line
-    while (std::getline(file, str)) {
+    // Add lines to string
+    while (std::getline(file, line)) {
+        sourceCode += line;
+        sourceCode += "\\n";
     }
-    return "Source Code";
+
+    return sourceCode;
 }
 
 void SCC::compile(std::string sourceCode) {
     // Lexer
-
+    Lexer lexer = Lexer(sourceCode);
+    lexer.tokenize();
     // Parser
 
     // AST
